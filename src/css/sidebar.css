@@ -34,3 +34,31 @@
     justify-content: space-evenly;
     color: #51585c;
 }
+.sidebar-searchbar{
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.sidebar-searchbar-input{
+    display: flex;
+    width: 90%;
+    background-color: #ededed;
+    height: 32px;
+    border-radius: 7px;
+    align-items: center;
+}
+.sidebar-searchbar-input>.MuiSvgIcon-root{
+    font-size: 18px;
+    color: #51585c;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.sidebar-searchbar-input>input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    width: 80%;
+}

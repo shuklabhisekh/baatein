@@ -2,6 +2,7 @@ import React from "react";
 import TollIcon from "@mui/icons-material/Toll";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import SearchIcon from "@mui/icons-material/Search";
 import "../css/sidebar.css";
 function Sidebar() {
   return (
@@ -19,6 +20,13 @@ function Sidebar() {
           <MoreVertIcon />
         </div>
       </div>
+      <div className="sidebar-searchbar">
+        <div className="sidebar-searchbar-input">
+          <SearchIcon />
+          <input type="text" placeholder="Search or start new chat" />
+        </div>
+      </div>
+      <div className="sidebar-chatlist"></div>
     </div>
   );
 }
