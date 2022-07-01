@@ -1,3 +1,5 @@
+import MoreVert from "@mui/icons-material/MoreVert";
+import Search from "@mui/icons-material/Search";
 import React from "react";
 import "../css/chatcontainer.css";
 function ChatContainer() {
@@ -12,6 +14,10 @@ function ChatContainer() {
             />
           </div>
           <p>Messi</p>
+        </div>
+        <div className="chat-container-header-btn">
+          <Search />
+          <MoreVert />
         </div>
       </div>
     </div>
