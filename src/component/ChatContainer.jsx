@@ -2,6 +2,7 @@ import MoreVert from "@mui/icons-material/MoreVert";
 import Search from "@mui/icons-material/Search";
 import React from "react";
 import "../css/chatcontainer.css";
+import ChatMessage from "./ChatMessage";
 function ChatContainer() {
   return (
     <div className="chat-container">
@@ -20,7 +21,9 @@ function ChatContainer() {
           <MoreVert />
         </div>
       </div>
-      <div className="chat-display-container"></div>
+      <div className="chat-display-container">
+        <ChatMessage />
+      </div>
     </div>
   );
 }

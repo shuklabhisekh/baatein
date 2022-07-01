@@ -1,0 +1,22 @@
+.chat-message{
+    display: flex;
+    background-color: #dcf8c6;
+    width: fit-content;
+    flex-direction: column;
+    margin: 15px 30px 15px 30px;
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    border-radius: 10px;
+    height: fit-content;
+}
+.chat-message-text{
+    text-align: left;
+    font-size: 14px;
+    padding-right: 55px;
+}
+.chat-message-date{
+    align-self: flex-end;
+    font-size: 11px;
+    color: gray;
+    font-weight: normal;
+}

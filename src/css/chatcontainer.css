@@ -27,6 +27,7 @@
     width: 42px;
     aspect-ratio: 1;
     border-radius: 100%;
+    object-fit: cover;
 }
 .chat-container-header-btn{
     margin-right: 15px;
