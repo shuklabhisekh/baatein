@@ -13,7 +13,7 @@ function AllRoutes() {
           <Route path="/chat" element={<ChatPage />} />
         </Routes>
       ) : (
-        <Login />
+        <Login setUser={setUser}/>
       )}
     </>
   );
