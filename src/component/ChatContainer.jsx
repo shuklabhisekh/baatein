@@ -3,6 +3,9 @@ import Search from "@mui/icons-material/Search";
 import React from "react";
 import "../css/chatcontainer.css";
 import ChatMessage from "./ChatMessage";
+import SendIcon from "@mui/icons-material/Send";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
+import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 function ChatContainer() {
   return (
     <div className="chat-container">
@@ -22,7 +25,22 @@ function ChatContainer() {
         </div>
       </div>
       <div className="chat-display-container">
-        <ChatMessage />
+        <ChatMessage
+          text={"Hello ,where is my 7th ballond-or"}
+          time={"4:00 PM"}
+        />
+      </div>
+      <div className="chat-input">
+        <div className="chat-input-btn">
+          <InsertEmoticonIcon />
+          <AttachFileIcon />
+        </div>
+        <form>
+          <input type="text" placeholder="Type a message" />
+        </form>
+        <div className="chat-input-btn">
+          <SendIcon />
+        </div>
       </div>
     </div>
   );

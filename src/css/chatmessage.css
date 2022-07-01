@@ -19,4 +19,37 @@
     font-size: 11px;
     color: gray;
     font-weight: normal;
+    margin-top: -8px;
+}
+
+.chat-input{
+    background-color: #ededed;
+    display: flex;
+    padding: 12px 16px 12px 12px;
+    align-items: center;
+    position: relative;
+}
+.chat-input-btn{
+    margin: 5px 15px 0px 5px;
+}
+.chat-input-btn>.MuiSvgIcon-root{
+    color: #51585c;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 100;
+    padding-left: 10px;
+
+}
+.chat-input>form{
+    flex: 1;
+    margin-right: 10px;
+}
+.chat-input>form>input{
+    height: 40px;
+    width: 97%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
 }
