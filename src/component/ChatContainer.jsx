@@ -1,12 +1,16 @@
 import MoreVert from "@mui/icons-material/MoreVert";
 import Search from "@mui/icons-material/Search";
-import React from "react";
+import React, { useState } from "react";
 import "../css/chatcontainer.css";
 import ChatMessage from "./ChatMessage";
 import SendIcon from "@mui/icons-material/Send";
+import Picker from "emoji-picker-react";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 function ChatContainer() {
+  const [message, setMessage] = useState("");
+  console.log(message);
+  const [openEmojibox, setOpenEmojibox] = useState(false);
   return (
     <div className="chat-container">
       <div className="chat-container-header">
@@ -31,12 +35,24 @@ function ChatContainer() {
         />
       </div>
       <div className="chat-input">
+        {openEmojibox && (
+          <Picker
+            onEmojiClick={(event, emojiObject) =>
+              setMessage(message + emojiObject.emoji)
+            }
+          />
+        )}
         <div className="chat-input-btn">
-          <InsertEmoticonIcon />
+          <InsertEmoticonIcon onClick={() => setOpenEmojibox(!openEmojibox)} />
           <AttachFileIcon />
         </div>
         <form>
-          <input type="text" placeholder="Type a message" />
+          <input
+            type="text"
+            value={message}
+            placeholder="Type a message"
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </form>
         <div className="chat-input-btn">
           <SendIcon />

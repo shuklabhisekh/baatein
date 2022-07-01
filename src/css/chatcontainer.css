@@ -46,3 +46,7 @@
     background-image: url("https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png");
     /* background-image: url("https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png") */
 }
+.emoji-picker-react{
+    position: absolute !important ;
+    top: -320px;
+}
