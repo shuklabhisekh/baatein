@@ -1,0 +1,26 @@
+.userprofile{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+.userprofile:hover{
+    background-color: #ededed;
+}
+.userprofile-image{
+    width: 50px;
+}
+.userprofile-image>img{
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+.userprofile-info{
+    flex: 1;
+    margin-left: 20px;
+    text-align: left;
+}
+.username{
+    text-transform: capitalize;
+}

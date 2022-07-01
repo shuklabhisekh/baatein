@@ -2,7 +2,7 @@
     min-width: 300px;
     width: 30%;
     border-right: 1px solid lightgrey;
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,7 @@ height: 50px;
 display: flex;
 align-items: center;
 justify-content: center;
+border-bottom: 1px solid lightgrey;
 }
 
 .sidebar-searchbar-input{

@@ -4,6 +4,7 @@ import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import "../css/sidebar.css";
+import UserProfile from "./UserProfile";
 function Sidebar() {
   return (
     <div className="sidebar">
@@ -26,7 +27,40 @@ function Sidebar() {
           <input type="text" placeholder="Search or start new chat" />
         </div>
       </div>
-      <div className="sidebar-chatlist"></div>
+      <div className="sidebar-chatlist">
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+        <UserProfile
+          name="Sam Malhotra"
+          imageurl="https://images.unsplash.com/photo-1520346539831-3eac0beaeb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzUxfHxwcm9maWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        />
+      </div>
     </div>
   );
 }
