@@ -20,6 +20,7 @@ function ChatContainer() {
           <MoreVert />
         </div>
       </div>
+      <div className="chat-display-container"></div>
     </div>
   );
 }

@@ -1,0 +1,47 @@
+.chat-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* background-image: url("https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png"); */
+}
+
+.chat-container-header{
+    display:  flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px 5px 10px;
+    background-color: #ededed;
+}
+.chat-user-info{
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.chat-user-img{
+    width: 44px;
+    margin-right: 12px;
+    margin-left: 10px;
+}
+.chat-user-img>img{
+    width: 42px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+.chat-container-header-btn{
+    margin-right: 15px;
+}
+.chat-container-header-btn>.MuiSvgIcon-root{
+    color: #51585c;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.chat-display-container{
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    background-color:#ece5dd ;
+    background-image: url("https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png");
+    /* background-image: url("https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png") */
+}
