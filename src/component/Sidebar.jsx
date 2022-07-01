@@ -30,7 +30,7 @@ function Sidebar() {
       <div className="sidebar-chatlist">
         <UserProfile
           name="Lionel Messi"
-          imageurl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjzrn2pZJ678yDiaHJqm8ZmTJatefHEbu2Q&usqp=CAU"
+          imageurl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi87wa28hkE7g4G7nlfiQ6P1hhSd1TA1zqfw&usqp=CAU"
         />
         <UserProfile
           name="Ter Stegen"

@@ -6,6 +6,9 @@ function Home() {
     <div className="home">
       <div className="home-container">
         <Sidebar />
+        <div className="home-bg">
+          <img src="./WhatsAppbg.png" alt="" />
+        </div>
       </div>
     </div>
   );
