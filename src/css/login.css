@@ -1,0 +1,17 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.login::before{
+    width: 100vw;
+    height: 222px;
+    background-color: #4ec0a5;
+    position: absolute;
+    top: 0;
+    content: "";
+}
