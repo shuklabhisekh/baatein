@@ -3,8 +3,10 @@ import "../css/home.css";
 import Sidebar from "./Sidebar";
 function Home() {
   return (
-    <div>
-      <Sidebar />
+    <div className="home">
+      <div className="home-container">
+        <Sidebar />
+      </div>
     </div>
   );
 }
