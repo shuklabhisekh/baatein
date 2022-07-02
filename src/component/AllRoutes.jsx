@@ -12,7 +12,7 @@ function AllRoutes() {
       {user ? (
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<ChatPage />} />
+          <Route path="/:emailId" element={<ChatPage />} />
         </Routes>
       ) : (
         <Login setUser={setUser} />
