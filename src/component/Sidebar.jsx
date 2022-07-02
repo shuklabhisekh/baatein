@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TollIcon from "@mui/icons-material/Toll";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -6,12 +6,16 @@ import SearchIcon from "@mui/icons-material/Search";
 import "../css/sidebar.css";
 import UserProfile from "./UserProfile";
 function Sidebar() {
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   return (
     <div className="sidebar">
       <div className="sidebar-header">
         <div className="sidebar-header-img">
           <img
-            src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60&auto=format&fit=crop&w=500&q=60://images.unsplash.com/photo-1544502062-f82887f03d1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=959&q=80"
+            src={
+              user?.photoURL
+              // "https://lh3.googleusercontent.com/a-/AOh14GiaHyOMWnqTHkwCBoFCEzbeHaHuRWSqH-oB9nKuCw=s96-c"
+            }
             alt=""
           />
         </div>
