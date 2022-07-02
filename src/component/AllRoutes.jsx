@@ -9,8 +9,8 @@ function AllRoutes() {
     <>
       {user ? (
         <Routes>
-          <Route path="/" element={<Home currentUser={user} />} />
-          <Route path="/chat" element={<ChatPage currentUser={user} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/chat" element={<ChatPage />} />
         </Routes>
       ) : (
         <Login setUser={setUser} />
