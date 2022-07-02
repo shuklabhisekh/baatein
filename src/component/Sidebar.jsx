@@ -5,6 +5,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import "../css/sidebar.css";
 import UserProfile from "./UserProfile";
+
 function Sidebar() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   return (
@@ -14,7 +15,6 @@ function Sidebar() {
           <img
             src={
               user?.photoURL
-              // "https://lh3.googleusercontent.com/a-/AOh14GiaHyOMWnqTHkwCBoFCEzbeHaHuRWSqH-oB9nKuCw=s96-c"
             }
             alt=""
           />
