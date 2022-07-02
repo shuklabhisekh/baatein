@@ -1,23 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TollIcon from "@mui/icons-material/Toll";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import "../css/sidebar.css";
 import UserProfile from "./UserProfile";
+import db, { auth } from "../firebase";
 
 function Sidebar() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [alluser, setAlluser] = useState([]);
+  useEffect(() => {
+    const getAlluser = async () => {
+      const data = await db.collection("users").onSnapshot((snapshot) => {
+        setAlluser(
+          snapshot.docs.filter((doc) => doc.data().email !== user?.email)
+        );
+      });
+    };
+    getAlluser();
+    console.log(alluser, "alluser");
+  }, []);
+  const signOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        setUser(null);
+        localStorage.removeItem("user");
+      })
+      .catch((err) => console.log(err));
+    window.location.reload(false);
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebar-header">
         <div className="sidebar-header-img">
-          <img
-            src={
-              user?.photoURL
-            }
-            alt=""
-          />
+          <img src={user?.photoURL} alt="" onClick={signOut} />
         </div>
         <div className="sidebar-header-btn">
           <TollIcon />
