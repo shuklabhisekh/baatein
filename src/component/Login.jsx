@@ -1,24 +1,25 @@
 import React from "react";
 import "../css/login.css";
 import { useNavigate } from "react-router-dom";
-// import db, { auth, googleProvider } from "../firebase";
+import db, { auth, googleProvider } from "../firebase";
 function Login({ setUser }) {
   const navigate = useNavigate();
   const signInWithGoogle = () => {
     console.log("clicked");
-    // auth
-    //   .signInWithPopup(googleProvider)
-    //   .then((res) => {
-    //     const newUser = {
-    //       fullname: res.user.displayName,
-    //       email: res.user.email,
-    //       photoURL: res.user.photoURL,
-    //     };
-    //     navigate("/");
-    //     setUser(newUser);
-    //     db.collection("users").doc(res.user.email).set(newUser);
-    //   })
-    //   .catch((err) => alert(err));
+    auth
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        const newUser = {
+          fullname: result.user.displayName,
+          email: result.user.email,
+          photoURL: result.user.photoURL,
+        };
+        navigate("/");
+        setUser(newUser);
+        localStorage.setItem("user", JSON.stringify(newUser));
+        db.collection("users").doc(result.user.email).set(newUser);
+      })
+      .catch((err) => console.log(err.message));
   };
   return (
     <div className="login">
