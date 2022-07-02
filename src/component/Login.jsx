@@ -5,6 +5,7 @@ import db, { auth, googleProvider } from "../firebase";
 function Login({ setUser }) {
   const navigate = useNavigate();
   const signInWithGoogle = () => {
+    console.log("clicked");
     auth
       .signInWithPopup(googleProvider)
       .then((result) => {
