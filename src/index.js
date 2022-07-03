@@ -7,21 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-var ws = new WebSocket('wss://baateinkaro.herokuapp.com:12678/ws');         
-
-       ws.onopen = function()    
-       {
-
-          // Web Socket is connected, send data using send()
-          var data={
-            mid:"login",
-            uid: myId
-
-          };
-               ws.send(JSON.stringify(data));      
-
-            };     
-
 
 root.render(
   <React.StrictMode>
