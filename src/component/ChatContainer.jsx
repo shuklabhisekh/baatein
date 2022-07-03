@@ -52,7 +52,7 @@ function ChatContainer() {
       </div>
       <div className="chat-display-container">
         <ChatMessage
-          text={"Hello ,where is my 7th ballond-or"}
+          text={"Hello , working on this chat part"}
           time={"4:00 PM"}
         />
       </div>
