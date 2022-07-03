@@ -1,27 +1,41 @@
 import MoreVert from "@mui/icons-material/MoreVert";
 import Search from "@mui/icons-material/Search";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/chatcontainer.css";
 import ChatMessage from "./ChatMessage";
 import SendIcon from "@mui/icons-material/Send";
 import Picker from "emoji-picker-react";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
+import { useParams } from "react-router-dom";
+import db from "../firebase";
 function ChatContainer() {
   const [message, setMessage] = useState("");
-  console.log(message);
+  const { emailId } = useParams();
   const [openEmojibox, setOpenEmojibox] = useState(false);
+  const [chatuser, setChatuser] = useState({});
+  useEffect(() => {
+    const getAlluser = async () => {
+      const data = await db.collection("users").onSnapshot((snapshot) => {
+        snapshot.docs.filter((doc) => {
+          if (doc.data().email === emailId) {
+            setChatuser(doc.data());
+          }
+        });
+      });
+    };
+    getAlluser();
+    // getMessages();
+  }, [emailId]);
+
   return (
     <div className="chat-container">
       <div className="chat-container-header">
         <div className="chat-user-info">
           <div className="chat-user-img">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi87wa28hkE7g4G7nlfiQ6P1hhSd1TA1zqfw&usqp=CAU"
-              alt=""
-            />
+            <img src={chatuser?.photoURL} alt="" />
           </div>
-          <p>Messi</p>
+          <p>{chatuser?.name}</p>
         </div>
         <div className="chat-container-header-btn">
           <Search />
