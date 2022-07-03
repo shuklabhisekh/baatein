@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const sockHost = process.env.WDS_SOCKET_HOST; 
+const sockPath = process.env.WDS_SOCKET_PATH; // default: '/ws' 
+const sockPort = process.env.WDS_SOCKET_PORT; 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
