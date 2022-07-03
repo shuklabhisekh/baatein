@@ -28,6 +28,14 @@ function ChatContainer() {
     // getMessages();
   }, [emailId]);
 
+  const sendMessage = (e) => {
+    e.preventDefault();
+    if (emailId) {
+      let payload = {
+        text: message,
+      };
+    }
+  };
   return (
     <div className="chat-container">
       <div className="chat-container-header">
@@ -35,7 +43,7 @@ function ChatContainer() {
           <div className="chat-user-img">
             <img src={chatuser?.photoURL} alt="" />
           </div>
-          <p>{chatuser?.name}</p>
+          <p>{chatuser?.fullname}</p>
         </div>
         <div className="chat-container-header-btn">
           <Search />
