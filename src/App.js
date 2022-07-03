@@ -2,7 +2,7 @@
 import AllRoutes from "./component/AllRoutes";
 
 function App() {
-  var ws = new WebSocket("wss://baateinkaro.herokuapp.com:12678/ws");
+  var ws = new WebSocket("wss://webrtc-filetransfer.herokuapp.com/");
 
   ws.onopen = function () {
     // Web Socket is connected, send data using send()
